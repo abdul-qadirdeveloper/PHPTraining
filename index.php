@@ -18,6 +18,79 @@ Dynamic
 
 
 page</h1>
+
+
+
+<h1>Identical operator</h1>
+<?php
+    $a = "2";
+    $b = 2;
+    if($a === $b)
+    {
+        echo "$a is equal to $b";
+    }else{
+        echo "$a is not equal to $b, because they differ by their type";
+    }
+?>
+<?php
+    $a = "2";
+    $b = 2;
+    if($a !== $b)
+    {
+        echo "$a is not equal to $b, because they differ by their type";
+    }else{
+        
+        echo "$a is equal to $b";
+    }
+?>
+
+<h1>Constants</h1>
+<!-- <?php
+    define("MY_LUCKY_NUMBER",23);
+    //MY_LUCKY_NUMBER++;  // this is not possible, you can not change a constant
+    echo MY_LUCKY_NUMBER;
+    define("H_KEYWORD", "hello!");
+    $a = H_KEYWORD." WaWa";
+    echo H_KEYWORD;
+    echo "<br>$a<br>";
+?> -->
+
+ <h1>ESCAPING CHARACTERS</h1>
+ <?php
+    $number = 12345 * 67890;
+    echo $number;
+    echo "<br>";
+    echo substr($number, 4);
+?>
+<br>
+ <?php
+       echo 'Ahmed\'s father is so kind <br>';
+        echo "<pre>Abdul\tQadir</pre> <br> ";
+        echo "<pre>Abdul\nQadir</pre> <br> ";
+        echo "<pre>Abdul\rQadir</pre> <br> ";
+
+        $author = "Steve Ballmer";
+		$longText = "<pre>Developers, Developers, developers, developers, developers, 
+developers, developers, developers, developers!
+		- $author.</pre>";
+        echo $longText;
+
+ ?>
+ <br>
+ <?php
+    $author = "Brian W. Kernighan";
+    echo <<<_abdul
+    <pre> Debugging is twice as hard as writing the code in the first place.
+    Therefore, if you write the code as cleverly as possible, you are,
+    by definition, not smart enough to debug it.
+    - $author.</pre>
+    _abdul;
+?>
+
+
+
+
+
 <h1>Opertors</h1>
 <?php
     $a = "a";
