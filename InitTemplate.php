@@ -10,7 +10,7 @@
             background: #f9f9f9;
             padding-top: 15px;
         }
-        body p{
+        body > p, body > div{
             margin: 30px 100px;
         }
         h1{            
@@ -24,22 +24,22 @@
 </head>
 <body>
     <h1>Test 1</h1>
-    <p>
+    <div>
         <?php
         
         ?>
-    </p>
+    </div>
     <!-- <h1>Test 2</h1>
-    <p>
+    <div>
         <?php
 
         ?>
-    </p> -->
+    </div> -->
     <!-- <h1>Test 3</h1>
-    <p>
+    <div>
         <?php        
             
         ?>
-    </p> -->
+    </div> -->
 </body>
 </html>
