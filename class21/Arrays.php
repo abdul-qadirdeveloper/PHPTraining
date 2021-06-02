@@ -56,11 +56,11 @@
     <h1>Associative Arrays</h1>
     <p>
         <?php
-            $animals["Cat"] = "Meo Meo" ;
-            $animals["Dog"] = "Wof wof";
+            // $animals["Cat"] = "Meo Meo" ;
+            // $animals["Dog"] = "Wof wof";
 
             //other way to assign into this array
-            //$animals = array( "cat" => "Meo Meo" , "Dog" => "Wof wof");
+            $animals = [ "cat" => "Meo Meo" , "Dog" => "Wof wof"];
 
 
             print_r($animals);
@@ -80,14 +80,14 @@
             'photo' => "Photographic Paper");
             print_r(each($paper));
             while(list($item, $description) = each($paper))
-            echo "$item: $description<br>";
+                echo "$item: $description<br>";
             
         ?>
     </p>
     <h1>list function</h1>
     <p>
         <?php        
-            list($a, $b, $c) = array('Alice', 'Bob','Cent');
+            list($a, $b) = array('Alice', 'Bob','Cent');
 			echo "a=$a b=$b c=$c";
 
         ?>
@@ -109,6 +109,9 @@
             ];
 
             foreach ($students as $studentName => $courses) {
+                if($studentName == "Sami"){
+                    continue;
+                }
                 echo "$studentName:";
                 foreach ($courses as $courseName => $Percentage) {
                     echo "<pre>\t\t$courseName: $Percentage%</pre>";
@@ -129,12 +132,73 @@
         <?php
            $a = 2;
            $b = array();
-           echo  is_array($a)?"a is array": "a is not an array";
+           echo  is_array($a)?"a is an array": "a is not an array";
            echo "<br>";
-           echo is_array($b) ? "b is array" : "b is not an array";
+           echo is_array($b) ? "b is an array" : "b is not an array";
            echo "<br>";
 
         ?>
+    </div>
+
+    <h1>Sort</h1>
+    <div>
+        <?php
+            $a = [0,'a',1,9,'z','A','Z']; 
+            //sort($a, SORT_NUMERIC);
+            sort($a, SORT_STRING);
+            print_r($a);
+            echo "<br>";
+
+             $a1 = [0,9,1,8,7,"z9"];
+
+             print_r($a1);
+             echo "<br>";
+              sort($a1, SORT_NUMERIC);
+              print_r($a1);
+              echo "<br>";
+             sort($a1, SORT_STRING);
+             print_r($a1);
+             echo "<br>";
+             echo "<br>";
+
+
+
+
+            $printers1[] = "Ink Jet";
+            $printers1[] = "Dot Matrix";
+            $printers1[] = "Laser";
+            $printers1[]="Photo Copier";
+            
+            print_r($printers1);
+            echo "Shuffle<br>";
+            shuffle($printers1); 
+            print_r($printers1);           
+            echo "<br>";
+            sort ($printers1);
+            print_r($printers1);
+            echo "<br>";
+
+            $printers11["cadfs"] = "Ink Jet";
+            $printers11["dsdfsd"] = "Dot Matrix";
+            $printers11["bsdfds"] = "Laser";
+            $printers11["asdfd"]="Photo Copier";
+            
+
+            print_r($printers11);
+            echo "<br>";
+            sort ($printers11);
+            print_r($printers11);
+            echo "<br>";
+        ?>
+    </div>
+
+    <h1>Explode</h1>
+    <div>
+    <?php
+         $str = "This;;is;my;car." ;   
+        $ex = explode(';', $str,3);
+        print_r($ex);
+    ?>
     </div>
 </body>
 </html>
