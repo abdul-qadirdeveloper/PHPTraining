@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #f9f9f9;
+            padding-top: 15px;
+        }
+        body > p, body > div{
+            margin: 30px 100px;
+        }
+        h1{            
+            text-align: center;
+            color: #e6e6e6;
+            background: #777;
+            border-radius: 25px;
+            margin: 10px 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>While Loop</h1>
+    <div>            
+        <script>
+            var count = 0;
+            document.write("Starting Loop ");
+            
+            while (count < 10) {
+                document.write("Current Count : " + count + "<br />");
+                count++;
+            }
+            
+            document.write("Loop stopped!");
+        </script>
+    </div>
+
+    <h1>do.. while loop</h1>
+    <div>
+        <script type = "text/javascript">
+               var count = 0;
+               
+               document.write("Starting Loop" + "<br />");
+               do {
+                  document.write("Current Count : " + count + "<br />");
+                  count++;
+               }
+               
+               while (count < 5);
+               document.write ("Loop stopped!");
+         </script> 
+    </div>
+    <h1>For loop</h1>
+    <div>
+        <script>
+            var count;
+            document.write("Starting Loop" + "<br />");
+         
+            for(count = 0; count < 10; count++) {
+               document.write("Current Count : " + count );
+               document.write("<br />");
+            }         
+            document.write("Loop stopped!");
+        </script>
+    </div>
+    <h1>For..in loop</h1>
+    <div>
+        <script>
+            var student = {
+                firstName: "Abdul",
+                middleName: "Qadir",
+                lastName: "Memon",                
+            };
+            document.write("student Object Properties<br /> ");        
+            for (var aProperty in student) {
+               document.write(aProperty + " = " + student[aProperty]);
+               document.write("<br />");
+            }
+            document.write ("Exiting from the loop!");
+
+            var testArray = [2,4,6,8,10];
+            document.write("testArray items<br /> ");        
+            for (var index in testArray) {
+               document.write(index + " = " + testArray[index]);
+               document.write("<br />");
+            }
+            document.write ("Exiting from the loop!");
+
+        </script>
+    </div>
+</body>
+
+</html>

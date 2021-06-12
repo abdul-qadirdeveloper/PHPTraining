@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #f9f9f9;
+            padding-top: 15px;
+        }
+        body > p, body > div{
+            margin: 30px 100px;
+        }
+        h1{            
+            text-align: center;
+            color: #e6e6e6;
+            background: #777;
+            border-radius: 25px;
+            margin: 10px 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>if else structure</h1>
+    <div>
+        <script>
+            var age = 15;
+
+            if (age > 18) {
+                document.write("<b>Qualifies for driving</b>");
+            } else {
+                document.write("<b>Does not qualify for driving</b>");
+            }
+        </script>
+    </div>
+
+    <h1>if else if else structure</h1>
+    <div>
+        <script>
+            var percentage = 70;
+
+            if (percentage < 30) {
+                document.write("<b>you are failed, you need hardwork!</b>");
+            } else if (percentage < 40) {
+                document.write("<b>You are just pass, you need hardwork, I am worried about you.</b>");
+            } else if (percentage < 50) {
+                document.write("<b>you are passed, but it is not satisfactory.</b>");
+            } else if (percentage < 60) {
+                document.write("<b>you are passed, I am expecting more from you.</b>");
+            } else {
+                document.write("<b>you are passed, good job, keep up the good work.</b>");
+            }   
+        </script>
+    </div>
+    <h1>switch case structure</h1>
+    <div>        
+        <script>
+            var grade = 'A';
+            document.write("Entering switch block<br />");
+            switch (grade) {
+            case 'A': document.write("Good job<br />");
+            break;
+            
+            case 'B': document.write("Pretty good<br />");
+            break;
+            
+            case 'C': document.write("Passed<br />");
+            break;
+            
+            case 'D': document.write("Not so good<br />");
+            break;
+            
+            case 'F': document.write("Failed<br />");
+            break;
+            
+            default:  document.write("Unknown grade<br />")
+            }
+            document.write("Exiting switch block");
+        </script>
+    </div>
+</body>
+
+</html>

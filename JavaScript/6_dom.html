@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>    
+    <style>
+        body {
+            background: #f9f9f9;
+            padding-top: 15px;
+        }
+        body > p, body > div{
+            margin: 30px 100px;
+        }
+        h1{            
+            text-align: center;
+            color: #e6e6e6;
+            background: #777;
+            border-radius: 25px;
+            margin: 10px 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>getElementById</h1>
+    <div>
+        <p>getElementById searches dom element by element id and returns one element</p>
+        <p>innerHTML - gets or sets html content of element</p>
+        <p id="demo1"></p>
+        <script>
+            var element = document.getElementById('demo1');
+            element.innerHTML = " <b> Hello World! </b>";
+        </script>
+    </div>
+    <h1>getElementsByTagName</h1>
+    <div>
+        
+        <div id="div1">
+            <p>getElementById searches dom elements by element tag name and returns array of elements</p>
+            <p>innerHTML - gets or sets html content of element</p>
+            <span></span>
+        </div>
+        <script>
+            
+            var div1 = document.getElementById('div1');
+            var paragraphs = div1.getElementsByTagName('p');
+            
+            var demo2 = div1.getElementsByTagName('span')[0];
+            console.log(demo2);
+            demo2.innerText = '<b>There are '+ paragraphs.length + ' Elements</b>';
+        </script>
+    </div>
+    <h1>getElementsByClassName</h1>
+    <div>
+        
+        <div id="div2">
+            <p class="my-text">getElementById searches dom elements by element class name and returns array of elements</p>
+            <p class="my-text">innerHTML - gets or sets html content of element</p>
+            <p class="my-text"></p>
+        </div>
+        <p id="demo-x" ></p>
+        <script>
+            
+            var div1 = document.getElementById('div2');
+            var paragraphs = div1.getElementsByClassName('my-text');
+            
+            var demox = document.getElementById('demo-x');
+            demox.innerHTML = 'There are '+ paragraphs.length + ' Elements in div1 with class my-text';
+        </script>
+    </div> 
+
+    <h1>createElement</h1>
+    <div>
+        <div id="create-element">above content is inserted by dom insert</div>
+        <script>
+            document.body.onload = addElement;
+
+            function addElement () {
+            // create a new div element
+            const newDiv = document.createElement("div");
+
+            // and give it some content
+            const newContent = document.createTextNode("Hi there and greetings!");
+
+            // add the text node to the newly created div
+            newDiv.appendChild(newContent);
+
+            // add the newly created element and its content into the DOM
+            const currentDiv = document.getElementById("create-element");
+            currentDiv.appendChild(newDiv);
+            }
+        </script>
+    </div>
+</body>
+</html>
