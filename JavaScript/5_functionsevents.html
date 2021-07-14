@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Functions and events</title>    
+    <title>Functions and events</title>
     <style>
         body {
             background: #f9f9f9;
             padding-top: 15px;
         }
-        body > p, body > div{
+        
+        body>p,
+        body>div {
             margin: 30px 100px;
         }
-        h1{            
+        
+        h1 {
             text-align: center;
             color: #e6e6e6;
             background: #777;
@@ -22,37 +26,45 @@
         }
     </style>
 </head>
+
 <body>
     <h1>functions and events</h1>
     <div>
-        <script type = "text/javascript">
+        <script type="text/javascript">
             function sayHello() {
                 var outputDiv = document.getElementById('outputDiv');
-               outputDiv.innerHTML = "Hello there!";
+                outputDiv.innerHTML = "Hello there!";
             }
-            function beforeFormSubmit(){
+
+            function beforeFormSubmit() {
                 var outputDiv = document.getElementById('outputDiv');
                 outputDiv.innerHTML = "here you could do validation before form actually sbumit, returning false will stop form submitting to server";
                 return false;
             }
-            function onMouseOut(){                
+
+            function onMouseOut() {
                 var outputDiv = document.getElementById('outputDiv');
                 outputDiv.innerHTML = "On Mouse Out event";
+                outputDiv.style.color = "red";
+
             }
-            function onMouseOver(){                
+
+            function onMouseOver() {
                 var outputDiv = document.getElementById('outputDiv');
                 outputDiv.innerHTML = "On Mouse over event";
+                outputDiv.style.color = "green";
             }
-         </script>
-        <p>Click the following button to call the function</p>      
-        <form method="POST" action = "doSomething" onsubmit="return beforeFormSubmit()">
-           <input type = "button" onclick = "sayHello()" value = "Say Hello">
-           <button type="submit">Submit</button>
-        </form> 
+        </script>
+        <p>Click the following button to call the function</p>
+        <form method="POST" action="doSomething" onsubmit="return beforeFormSubmit()">
+            <input type="button" onclick="sayHello()" value="Say Hello">
+            <button type="submit">Submit</button>
+        </form>
         <div onmouseover="onMouseOver()" onmouseout="onMouseOut()" style="width: 500px; height: 500px; background-color: #e7e7e7;">
             Mouse over and out test
-        </div>     
+        </div>
         <div id="outputDiv">press button to see message</div>
     </div>
 </body>
+
 </html>
